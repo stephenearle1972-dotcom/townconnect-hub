@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* TownConnect Brand Colors - Teal & Amber */
+@theme {
+  /* Primary - Teal */
+  --color-teal: #0891b2;
+  --color-teal-light: #06b6d4;
+  --color-teal-dark: #0e7490;
+  --color-teal-50: #f0fdfa;
+
+  /* Accent - Amber */
+  --color-amber: #f59e0b;
+  --color-amber-hover: #d97706;
+  --color-amber-light: #fef3c7;
+
+  /* Neutrals */
+  --color-dark: #1f2937;
+  --color-gray: #6b7280;
+  --color-gray-light: #9ca3af;
+  --color-gray-50: #f9fafb;
+  --color-white: #ffffff;
+  --color-border: #e5e7eb;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+
+  --shadow-card: 0 20px 40px -20px rgba(8, 145, 178, 0.15);
+  --shadow-btn: 0 10px 20px -10px rgba(245, 158, 11, 0.4);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Primary Button - Amber */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-amber);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-primary:hover {
+  background-color: var(--color-amber-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn);
+}
+
+/* Secondary Button - Teal outline */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-teal);
+  font-weight: 600;
+  border: 2px solid var(--color-teal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-secondary:hover {
+  background-color: var(--color-teal);
+  color: white;
+}
+
+/* White outline button for dark backgrounds */
+.btn-white-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-white-outline:hover {
+  background-color: white;
+  color: var(--color-teal);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border: 1px solid var(--color-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-teal-light);
+}
+
+/* Hero overlay - Teal gradient */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(8, 145, 178, 0.85) 0%, rgba(6, 182, 212, 0.75) 50%, rgba(14, 116, 144, 0.85) 100%);
+}
+
+/* Animations */
+.animate-fade {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-gray-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-teal);
+}
+
+/* Link styles */
+a.link {
+  color: var(--color-teal);
+  transition: color 0.2s;
+}
+a.link:hover {
+  color: var(--color-teal-dark);
+}
