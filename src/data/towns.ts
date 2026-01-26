@@ -79,6 +79,16 @@ export const towns: Town[] = [
     siteUrl: 'https://bloubergconnect.netlify.app',
     isActive: true,
   },
+  {
+    id: 'garsfontein',
+    name: 'Garsfontein',
+    region: 'Gauteng',
+    description: "Pretoria East's Family Suburb",
+    businessCount: '0+',
+    categories: ['Services', 'Retail', 'Health & Medical', 'Education'],
+    siteUrl: 'https://garsfonteinconnect.netlify.app',
+    isActive: true,
+  },
 ];
 
 export const upcomingTowns: Town[] = [
