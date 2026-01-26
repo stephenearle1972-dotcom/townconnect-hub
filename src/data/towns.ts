@@ -59,6 +59,16 @@ export const towns: Town[] = [
     siteUrl: 'https://modimolleconnect.netlify.app',
     isActive: true,
   },
+  {
+    id: 'parklands',
+    name: 'Parklands',
+    region: 'Western Cape',
+    description: 'Family & Services Hub',
+    businessCount: '0+',
+    categories: ['Services', 'Retail', 'Health & Medical'],
+    siteUrl: 'https://parklandsconnect.netlify.app',
+    isActive: true,
+  },
 ];
 
 export const upcomingTowns: Town[] = [
