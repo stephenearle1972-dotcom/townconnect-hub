@@ -69,6 +69,16 @@ export const towns: Town[] = [
     siteUrl: 'https://parklandsconnect.netlify.app',
     isActive: true,
   },
+  {
+    id: 'blouberg',
+    name: 'Blouberg',
+    region: 'Western Cape',
+    description: 'West Coast Lifestyle Hub',
+    businessCount: '0+',
+    categories: ['Tourism', 'Restaurants', 'Services', 'Lifestyle'],
+    siteUrl: 'https://bloubergconnect.netlify.app',
+    isActive: true,
+  },
 ];
 
 export const upcomingTowns: Town[] = [
