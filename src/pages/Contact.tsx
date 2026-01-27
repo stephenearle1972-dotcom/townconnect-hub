@@ -5,7 +5,7 @@ const inquiryTypes = [
   'General Inquiry',
   'Business Listing',
   'Network Solutions',
-  'Operate a Town',
+  'Become an Area Partner',
   'Press/Media',
   'Other',
 ]
@@ -89,26 +89,26 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Operator Interest */}
+              {/* Partner Interest */}
               <div className="mt-12 card rounded-2xl p-6">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal text-white">
                     <Users className="h-5 w-5" />
                   </div>
                   <h3 className="font-serif text-lg font-semibold text-gray-800">
-                    Become a Town Operator
+                    Become an Area Partner
                   </h3>
                 </div>
                 <p className="mt-4 text-gray-600">
-                  Interested in operating TownConnect in your area? We work with trusted
+                  Interested in operating TownConnect in your town or neighbourhood? We work with trusted
                   partners to expand our network across South Africa.
                 </p>
                 <p className="mt-3 text-gray-600">
-                  This is a family business model - operators share in the revenue while
+                  This is a family business model - Area Partners share in the revenue while
                   benefiting from our platform, technology, and support.
                 </p>
                 <p className="mt-4 text-sm font-medium text-gray-800">
-                  Select "Operate a Town" in the contact form to learn more.
+                  Select "Become an Area Partner" in the contact form to learn more.
                 </p>
               </div>
             </div>

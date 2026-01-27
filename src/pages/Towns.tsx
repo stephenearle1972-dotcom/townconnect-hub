@@ -24,7 +24,7 @@ export default function Towns() {
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 text-center lg:px-8">
           <h1 className="font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl animate-fade">
-            TownConnect Locations
+            TownConnect Communities
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 animate-fade">
             Find your local directory and discover businesses in your community
@@ -42,7 +42,7 @@ export default function Towns() {
                 <span className="relative inline-flex h-3 w-3 rounded-full bg-teal"></span>
               </span>
             </div>
-            <h2 className="font-serif text-2xl font-bold text-gray-800">Active Towns</h2>
+            <h2 className="font-serif text-2xl font-bold text-gray-800">Active Communities</h2>
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
@@ -205,7 +205,7 @@ export default function Towns() {
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
                   <span className="text-2xl text-teal">+</span>
                 </div>
-                <p className="mt-3 font-medium text-gray-800">More towns coming</p>
+                <p className="mt-3 font-medium text-gray-800">More communities coming</p>
                 <p className="mt-1 text-sm text-gray-500">We're expanding across South Africa</p>
               </div>
             </div>
@@ -213,16 +213,16 @@ export default function Towns() {
         </div>
       </section>
 
-      {/* Want TownConnect in Your Town CTA */}
+      {/* Want TownConnect in Your Area CTA */}
       <section className="bg-teal-dark py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex flex-col items-center text-center lg:flex-row lg:justify-between lg:text-left">
             <div className="max-w-xl">
               <h2 className="font-serif text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Want TownConnect in Your Town?
+                Want TownConnect in Your Area?
               </h2>
               <p className="mt-4 text-lg text-white/80">
-                Interested in bringing TownConnect to your area? We work with trusted
+                Interested in bringing TownConnect to your town or neighbourhood? We work with trusted
                 partners to expand our network across South Africa.
               </p>
               <p className="mt-2 text-white/60">

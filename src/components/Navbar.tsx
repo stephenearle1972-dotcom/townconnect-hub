@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Towns', href: '/towns' },
+  { name: 'Communities', href: '/towns' },
   { name: 'For Businesses', href: '/business' },
   { name: 'Network Solutions', href: '/network' },
   { name: 'Contact', href: '/contact' },

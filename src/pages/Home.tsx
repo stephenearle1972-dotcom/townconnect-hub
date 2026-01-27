@@ -297,7 +297,7 @@ export default function Home() {
               Available Areas
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              700+ towns available across South Africa. Here are our current live sites:
+              700+ communities across South Africa. Here are our current live sites:
             </p>
           </div>
 
@@ -330,12 +330,12 @@ export default function Home() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl" />
             <Globe className="h-16 w-16 mx-auto mb-6 opacity-80" />
             <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
-              Your Town Could Be Next
+              Your Community Could Be Next
             </h3>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
               Pretoria, Johannesburg, Cape Town, Durban, Bloemfontein, East London,
               Polokwane, Nelspruit, Kimberley, Rustenburg... and hundreds more towns
-              across all 9 provinces are available.
+              and neighbourhoods across all 9 provinces are available.
             </p>
             <button
               onClick={scrollToApplication}

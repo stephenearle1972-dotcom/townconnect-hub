@@ -9,9 +9,15 @@ const footerLinks = {
     { name: 'Network Solutions', href: '/network' },
   ],
   resources: [
-    { name: 'All Towns', href: '/towns' },
+    { name: 'All Communities', href: '/towns' },
     { name: 'Business Pricing', href: '/business' },
-    { name: 'Become an Operator', href: '/contact' },
+    { name: 'Become a Partner', href: '/contact' },
+  ],
+  legal: [
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Disclaimer', href: '/disclaimer' },
+    { name: 'Cookie Policy', href: '/cookies' },
   ],
 }
 
@@ -21,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2">
@@ -33,7 +39,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm leading-6 text-gray-400">
-              Connecting communities with local businesses through WhatsApp-first directories across South Africa.
+              Hyperlocal directories for towns and neighbourhoods across South Africa.
             </p>
             <div className="mt-4 flex flex-col gap-2 text-sm">
               <a
@@ -50,17 +56,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Towns */}
+          {/* Communities */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Our Towns
+              Our Communities
             </h3>
             <div className="mt-4">
               <Link
                 to="/towns"
                 className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-teal-light transition-colors"
               >
-                View All Towns
+                View All Communities
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -92,6 +98,25 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-gray-400 hover:text-teal-light transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+              Legal
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
