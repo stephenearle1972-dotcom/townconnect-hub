@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Globe,
   Zap,
@@ -522,14 +523,12 @@ export default function Home() {
               <p className="text-lg font-semibold">Already a business owner?</p>
               <p className="text-gray-400">List your business with your local TownConnect directory</p>
             </div>
-            <a
-              href="https://vaalwaterconnect.co.za/#add-business"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/business"
               className="btn-primary rounded-lg px-6 py-3 text-sm whitespace-nowrap"
             >
               List Your Business
-            </a>
+            </Link>
           </div>
         </div>
       </section>
