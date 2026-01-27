@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Building2,
   MessageCircle,
@@ -231,11 +232,16 @@ export default function Network() {
                   Lead Generation
                 </span>
               </div>
-              <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
-                Generate Qualified Leads
-              </h2>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
+                  Generate Qualified Leads
+                </h2>
+                <span className="inline-flex items-center rounded-full bg-amber px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                  Coming Q2 2026
+                </span>
+              </div>
               <p className="mt-4 text-lg text-gray-600">
-                We can help generate qualified leads for your business through our
+                Soon we'll help you generate qualified leads for your business through our
                 hyperlocal network. Our community-focused approach means higher
                 quality leads from customers actively looking for your services.
               </p>
@@ -255,13 +261,13 @@ export default function Network() {
               </ul>
             </div>
             <div className="flex-shrink-0">
-              <a
-                href="#network-form"
+              <Link
+                to="/contact"
                 className="btn-primary inline-flex items-center gap-2 rounded-lg px-6 py-3.5 text-base"
               >
-                Speak to us about lead generation
+                Register Your Interest
                 <ArrowRight className="h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
