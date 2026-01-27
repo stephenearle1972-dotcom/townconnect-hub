@@ -7,9 +7,12 @@ export interface Town {
   businessCount: string;
   categories: string[];
   siteUrl: string;
+  listingUrl?: string;
   whatsappUrl?: string;
   isActive: boolean;
   launchDate?: string;
+  lat?: number;
+  lng?: number;
 }
 
 export const towns: Town[] = [
@@ -22,8 +25,11 @@ export const towns: Town[] = [
     businessCount: '11',
     categories: ['Restaurants', 'Services', 'Accommodation', 'Retail'],
     siteUrl: 'https://vaalwaterconnect.co.za',
+    listingUrl: 'https://vaalwaterconnect.co.za/#/add-business',
     whatsappUrl: 'https://wa.me/27xxxxxxxxx',
     isActive: true,
+    lat: -24.2967,
+    lng: 28.0731,
   },
   {
     id: 'menlyn',
@@ -34,8 +40,11 @@ export const towns: Town[] = [
     businessCount: '0',
     categories: ['Shopping', 'Restaurants', 'Services', 'Entertainment'],
     siteUrl: 'https://menlynconnect.netlify.app',
+    listingUrl: 'https://menlynconnect.netlify.app/#/add-business',
     whatsappUrl: 'https://wa.me/27xxxxxxxxx',
     isActive: true,
+    lat: -25.7823,
+    lng: 28.2753,
   },
   {
     id: 'portalfred',
@@ -46,18 +55,24 @@ export const towns: Town[] = [
     businessCount: '0',
     categories: ['Tourism', 'Restaurants', 'Services', 'Property'],
     siteUrl: 'https://portalfredconnect-live.netlify.app',
+    listingUrl: 'https://portalfredconnect-live.netlify.app/#/add-business',
     whatsappUrl: 'https://wa.me/27xxxxxxxxx',
     isActive: true,
+    lat: -33.5906,
+    lng: 26.8867,
   },
   {
     id: 'modimolle',
-    name: 'ModimolleConnect',
+    name: 'Modimolle',
     region: 'Limpopo',
     description: 'Heart of the Waterberg - gateway to game farms and nature reserves',
     businessCount: '0',
     categories: ['Tourism', 'Restaurants', 'Services'],
     siteUrl: 'https://modimolleconnect.netlify.app',
+    listingUrl: 'https://modimolleconnect.netlify.app/#/add-business',
     isActive: true,
+    lat: -24.7000,
+    lng: 28.4000,
   },
   {
     id: 'parklands',
@@ -67,7 +82,10 @@ export const towns: Town[] = [
     businessCount: '0',
     categories: ['Services', 'Retail', 'Health & Medical'],
     siteUrl: 'https://parklandsconnect.netlify.app',
+    listingUrl: 'https://parklandsconnect.netlify.app/#/add-business',
     isActive: true,
+    lat: -33.8100,
+    lng: 18.5000,
   },
   {
     id: 'blouberg',
@@ -77,7 +95,10 @@ export const towns: Town[] = [
     businessCount: '0',
     categories: ['Tourism', 'Restaurants', 'Services', 'Lifestyle'],
     siteUrl: 'https://bloubergconnect.netlify.app',
+    listingUrl: 'https://bloubergconnect.netlify.app/#/add-business',
     isActive: true,
+    lat: -33.7900,
+    lng: 18.4700,
   },
   {
     id: 'garsfontein',
@@ -87,7 +108,10 @@ export const towns: Town[] = [
     businessCount: '0',
     categories: ['Services', 'Retail', 'Health & Medical', 'Education'],
     siteUrl: 'https://garsfonteinconnect.netlify.app',
+    listingUrl: 'https://garsfonteinconnect.netlify.app/#/add-business',
     isActive: true,
+    lat: -25.8000,
+    lng: 28.3100,
   },
 ];
 

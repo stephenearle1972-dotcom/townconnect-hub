@@ -124,12 +124,12 @@ export default function Network() {
             across our growing network of hyperlocal directories.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            <a
-              href="#network-form"
+            <Link
+              to="/contact?subject=Network%20Solutions%20Inquiry"
               className="btn-primary w-full rounded-lg px-8 py-4 text-base sm:w-auto"
             >
               Get Started
-            </a>
+            </Link>
             <div className="flex items-center gap-2 text-white/80">
               <Users className="h-5 w-5" />
               <span>Currently serving {towns.length} towns</span>
@@ -205,15 +205,18 @@ export default function Network() {
                 </ul>
 
                 <div className="mt-8">
-                  <a
-                    href="#network-form"
+                  <Link
+                    to={product.isCustom
+                      ? `/contact?subject=${encodeURIComponent('Custom Pricing - ' + product.name)}`
+                      : `/contact?subject=${encodeURIComponent('Network Solutions - ' + product.name)}`
+                    }
                     className={`inline-flex items-center gap-2 font-semibold ${
                       product.isCustom ? 'text-gray-800' : 'text-teal'
                     } hover:underline`}
                   >
                     {product.isCustom ? 'Contact us for custom pricing' : 'Get started'}
                     <ArrowRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

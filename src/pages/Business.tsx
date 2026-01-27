@@ -146,8 +146,8 @@ export default function Business() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#inquiry-form"
+                <Link
+                  to={`/contact?subject=${encodeURIComponent('Business Listing - ' + tier.name + ' Plan')}`}
                   className={`mt-8 block w-full rounded-lg py-3 text-center font-semibold transition-all ${
                     tier.popular
                       ? 'btn-primary'
@@ -155,7 +155,7 @@ export default function Business() {
                   }`}
                 >
                   {tier.cta}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

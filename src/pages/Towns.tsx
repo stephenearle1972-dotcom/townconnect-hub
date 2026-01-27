@@ -6,7 +6,8 @@ import {
   ExternalLink,
   MessageCircle,
   Clock,
-  ArrowRight
+  ArrowRight,
+  Plus
 } from 'lucide-react'
 import { towns, upcomingTowns } from '../data/towns'
 
@@ -49,7 +50,7 @@ export default function Towns() {
             {towns.map((town) => (
               <div
                 key={town.id}
-                className="card overflow-hidden rounded-2xl"
+                className="card flex flex-col overflow-hidden rounded-2xl"
               >
                 {/* Town Header */}
                 <div className="bg-teal-dark px-6 py-8 text-white">
@@ -64,7 +65,7 @@ export default function Towns() {
                 </div>
 
                 {/* Town Details */}
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <p className="text-gray-600">{town.description}</p>
 
                   <div className="mt-6 grid grid-cols-2 gap-4">
@@ -100,25 +101,39 @@ export default function Towns() {
                     </div>
                   </div>
 
-                  <div className="mt-6 flex gap-3">
-                    <a
-                      href={town.siteUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold"
-                    >
-                      Visit {town.name}Connect
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                    {town.whatsappUrl && (
+                  {/* Buttons pinned to bottom */}
+                  <div className="mt-auto pt-6">
+                    <div className="flex gap-3">
                       <a
-                        href={town.whatsappUrl}
+                        href={town.siteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center rounded-lg border-2 border-green-600 px-4 py-3 text-green-600 transition-colors hover:bg-green-50"
-                        title="WhatsApp Directory"
+                        className="btn-primary flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold"
                       >
-                        <MessageCircle className="h-5 w-5" />
+                        Visit {town.name}Connect
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                      {town.whatsappUrl && (
+                        <a
+                          href={town.whatsappUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center rounded-lg border-2 border-green-600 px-4 py-3 text-green-600 transition-colors hover:bg-green-50"
+                          title="WhatsApp Directory"
+                        >
+                          <MessageCircle className="h-5 w-5" />
+                        </a>
+                      )}
+                    </div>
+                    {town.listingUrl && (
+                      <a
+                        href={town.listingUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border-2 border-teal px-4 py-3 text-sm font-semibold text-teal transition-colors hover:bg-teal-50"
+                      >
+                        <Plus className="h-4 w-4" />
+                        Add Your Business
                       </a>
                     )}
                   </div>
