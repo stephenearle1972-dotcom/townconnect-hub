@@ -5,6 +5,7 @@ import Business from './pages/Business'
 import Network from './pages/Network'
 import Towns from './pages/Towns'
 import Contact from './pages/Contact'
+import ThankYou from './pages/ThankYou'
 import TermsOfService from './pages/TermsOfService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Disclaimer from './pages/Disclaimer'
@@ -19,6 +20,7 @@ function App() {
         <Route path="network" element={<Network />} />
         <Route path="towns" element={<Towns />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="thank-you" element={<ThankYou />} />
         <Route path="terms" element={<TermsOfService />} />
         <Route path="privacy" element={<PrivacyPolicy />} />
         <Route path="disclaimer" element={<Disclaimer />} />

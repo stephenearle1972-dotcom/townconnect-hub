@@ -176,17 +176,21 @@ export default function Business() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {addOnModules.map((addon) => (
-              <div
+              <Link
                 key={addon.name}
-                className="card rounded-xl p-6"
+                to={`/contact?subject=${encodeURIComponent(addon.name + ' Module Inquiry')}`}
+                className="card rounded-xl p-6 transition-all hover:shadow-lg hover:border-teal group"
               >
-                <h3 className="font-semibold text-gray-800">{addon.name}</h3>
+                <h3 className="font-semibold text-gray-800 group-hover:text-teal transition-colors">{addon.name}</h3>
                 <p className="mt-2 text-sm text-gray-600">{addon.description}</p>
                 <div className="mt-4">
                   <span className="text-2xl font-bold text-gray-800">{addon.price}</span>
                   <span className="text-gray-500">{addon.period}</span>
                 </div>
-              </div>
+                <p className="mt-3 text-xs font-semibold text-teal opacity-0 group-hover:opacity-100 transition-opacity">
+                  Click to inquire &rarr;
+                </p>
+              </Link>
             ))}
           </div>
         </div>

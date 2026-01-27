@@ -126,6 +126,8 @@ export const upcomingTowns: Town[] = [
     siteUrl: '',
     isActive: false,
     launchDate: 'Q2 2025',
+    lat: -23.6833,
+    lng: 27.7000,
   },
 ];
 

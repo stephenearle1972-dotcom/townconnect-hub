@@ -10,6 +10,7 @@ import {
   Plus
 } from 'lucide-react'
 import { towns, upcomingTowns } from '../data/towns'
+import TownMap from '../components/TownMap'
 
 export default function Towns() {
   return (
@@ -144,25 +145,16 @@ export default function Towns() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Interactive Map */}
       <section className="bg-gray-50 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <h2 className="font-serif text-2xl font-bold text-gray-800">Our Coverage</h2>
           <p className="mt-2 text-gray-600">
-            TownConnect is growing across South Africa
+            TownConnect is growing across South Africa. Click on a marker to learn more.
           </p>
 
-          {/* Map placeholder */}
-          <div className="mt-8 overflow-hidden rounded-2xl">
-            <div className="card flex h-64 items-center justify-center lg:h-96">
-              <div className="text-center">
-                <MapPin className="mx-auto h-12 w-12 text-teal" />
-                <p className="mt-4 font-medium text-gray-800">Interactive map coming soon</p>
-                <p className="mt-1 text-sm text-gray-500">
-                  Currently serving Limpopo, Gauteng, and Eastern Cape
-                </p>
-              </div>
-            </div>
+          <div className="mt-8 overflow-hidden rounded-2xl shadow-lg">
+            <TownMap />
           </div>
         </div>
       </section>
