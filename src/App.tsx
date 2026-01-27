@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Business from './pages/Business'
 import Network from './pages/Network'
@@ -13,7 +14,9 @@ import CookiePolicy from './pages/CookiePolicy'
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="business" element={<Business />} />
@@ -27,6 +30,7 @@ function App() {
         <Route path="cookies" element={<CookiePolicy />} />
       </Route>
     </Routes>
+    </>
   )
 }
 

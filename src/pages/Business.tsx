@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, Star, Zap, TrendingUp, ArrowRight } from 'lucide-react'
 import { towns, businessCategories } from '../data/towns'
+import PayFastButton from '../components/PayFastButton'
 
 const pricingTiers = [
   {
     name: 'Basic',
-    price: 'R99',
+    price: 99,
     period: '/month',
     description: 'Get your business listed and discovered by local customers.',
     features: [
@@ -20,7 +21,7 @@ const pricingTiers = [
   },
   {
     name: 'Standard',
-    price: 'R299',
+    price: 299,
     period: '/month',
     description: 'Stand out with enhanced visibility and features.',
     features: [
@@ -36,7 +37,7 @@ const pricingTiers = [
   },
   {
     name: 'Premium',
-    price: 'R999',
+    price: 999,
     period: '/month',
     description: 'Maximum visibility and premium features for growing businesses.',
     features: [
@@ -133,7 +134,7 @@ export default function Business() {
                 <div className="text-center">
                   <h3 className="font-serif text-xl font-bold text-gray-800">{tier.name}</h3>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold text-gray-800">{tier.price}</span>
+                    <span className="text-4xl font-bold text-gray-800">R{tier.price}</span>
                     <span className="text-gray-500">{tier.period}</span>
                   </div>
                   <p className="mt-4 text-sm text-gray-600">{tier.description}</p>
@@ -146,8 +147,10 @@ export default function Business() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to={`/contact?subject=${encodeURIComponent('Business Listing - ' + tier.name + ' Plan')}`}
+                <PayFastButton
+                  amount={tier.price}
+                  itemName={`TownConnect ${tier.name} Listing - Monthly`}
+                  itemDescription={`Monthly subscription for ${tier.name} tier business listing`}
                   className={`mt-8 block w-full rounded-lg py-3 text-center font-semibold transition-all ${
                     tier.popular
                       ? 'btn-primary'
@@ -155,7 +158,7 @@ export default function Business() {
                   }`}
                 >
                   {tier.cta}
-                </Link>
+                </PayFastButton>
               </div>
             ))}
           </div>
