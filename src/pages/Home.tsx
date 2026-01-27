@@ -79,7 +79,7 @@ export default function Home() {
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-white/90">
               Launch your own TownConnect site. We provide everything — website, WhatsApp bot,
-              training, and support. You focus on signing local businesses and earning 50% of every sale.
+              training, and support. You focus on signing local businesses and growing your directory.
             </p>
             <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
               <button
@@ -141,17 +141,17 @@ export default function Home() {
               </p>
             </div>
 
-            {/* 50/50 Revenue Share */}
+            {/* Revenue Partnership */}
             <div className="card rounded-2xl p-8 text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-amber text-white">
                 <TrendingUp className="h-8 w-8" />
               </div>
               <h3 className="mt-6 font-serif text-2xl font-bold text-gray-800">
-                50/50 Revenue Share
+                Revenue Partnership
               </h3>
               <p className="mt-4 text-gray-600">
-                You sell, we split. Simple. Earn R25-R300 per business per month.
-                100 businesses = R2,500-R30,000/month passive income.
+                Build sustainable monthly income as your local directory grows.
+                Earn from every business you sign up in your area.
               </p>
             </div>
           </div>
@@ -172,37 +172,26 @@ export default function Home() {
 
               <ul className="mt-8 space-y-4">
                 {[
-                  { item: 'Branded [Town]Connect website', value: 'R50,000+' },
-                  { item: 'WhatsApp directory bot', value: 'R30,000+' },
-                  { item: 'Facebook Page setup', value: 'R5,000' },
-                  { item: 'Google Business Profile', value: 'R2,000' },
-                  { item: 'Training & onboarding', value: 'R10,000' },
-                  { item: 'Ongoing tech support', value: 'R24,000/year' },
-                  { item: 'Central listing management', value: 'Included' },
-                ].map((benefit) => (
-                  <li key={benefit.item} className="flex items-start gap-4">
+                  'Branded [Town]Connect website',
+                  'WhatsApp directory bot',
+                  'Facebook Page setup',
+                  'Google Business Profile',
+                  'Training & onboarding',
+                  'Ongoing technical support',
+                  'Central listing management',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-4">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal text-white">
                       <Check className="h-4 w-4" />
                     </div>
-                    <div className="flex-1 flex justify-between items-center">
-                      <span className="text-gray-800 font-medium">{benefit.item}</span>
-                      <span className="text-teal font-semibold">{benefit.value}</span>
-                    </div>
+                    <span className="text-gray-800 font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-teal to-teal-light text-white">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div>
-                    <p className="text-white/80 text-sm uppercase tracking-wider">Total Value</p>
-                    <p className="text-3xl font-bold">R120,000+</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-white/80 text-sm uppercase tracking-wider">Your Investment</p>
-                    <p className="text-3xl font-bold">R10,000</p>
-                  </div>
-                </div>
+              <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-teal to-teal-light text-white text-center">
+                <p className="text-white/80 text-sm uppercase tracking-wider">Setup Fee</p>
+                <p className="text-3xl font-bold">R10,000</p>
               </div>
             </div>
 
@@ -212,10 +201,6 @@ export default function Home() {
                 alt="Business owner with laptop"
                 className="rounded-2xl shadow-lg"
               />
-              <div className="absolute -bottom-6 -left-6 rounded-xl bg-amber p-6 shadow-lg">
-                <p className="text-3xl font-bold text-white">50%</p>
-                <p className="text-white/90 text-sm">Revenue Share</p>
-              </div>
             </div>
           </div>
         </div>
@@ -285,8 +270,8 @@ export default function Home() {
                   Earn
                 </h3>
                 <p className="mt-4 text-gray-600">
-                  Start signing local businesses. You keep 50% of every subscription.
-                  Build recurring revenue in your community.
+                  Start signing local businesses. Build recurring monthly income
+                  as your directory grows in your community.
                 </p>
               </div>
             </div>

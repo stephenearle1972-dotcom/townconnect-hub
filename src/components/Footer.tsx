@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Mail, MapPin } from 'lucide-react'
+import { Mail, MapPin, ArrowRight } from 'lucide-react'
 
 const footerLinks = {
-  towns: [
-    { name: 'VaalwaterConnect', href: 'https://vaalwaterconnect.co.za', external: true },
-    { name: 'MenlynConnect', href: 'https://comfy-paprenjak-68fb7b.netlify.app/', external: true },
-    { name: 'Port Alfred Connect', href: 'https://wonderful-kheer-842fe7.netlify.app/', external: true },
-  ],
   company: [
     { name: 'About Us', href: '/contact' },
     { name: 'Contact', href: '/contact' },
@@ -60,20 +55,15 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
               Our Towns
             </h3>
-            <ul className="mt-4 space-y-3">
-              {footerLinks.towns.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-gray-400 hover:text-teal-light transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-4">
+              <Link
+                to="/towns"
+                className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-teal-light transition-colors"
+              >
+                View All Towns
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
 
           {/* Company */}
