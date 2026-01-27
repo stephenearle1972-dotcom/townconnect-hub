@@ -45,7 +45,7 @@ export const towns: Town[] = [
     population: '~25,000',
     businessCount: '0',
     categories: ['Tourism', 'Restaurants', 'Services', 'Property'],
-    siteUrl: 'https://portalfredconnect.netlify.app',
+    siteUrl: 'https://portalfredconnect-live.netlify.app',
     whatsappUrl: 'https://wa.me/27xxxxxxxxx',
     isActive: true,
   },
