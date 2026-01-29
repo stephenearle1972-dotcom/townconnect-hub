@@ -192,7 +192,7 @@ export default function Home() {
 
               <div className="mt-10 p-6 rounded-2xl bg-gradient-to-r from-teal to-teal-light text-white text-center">
                 <p className="text-white/80 text-sm uppercase tracking-wider">Setup Fee</p>
-                <p className="text-3xl font-bold">R10,000</p>
+                <p className="text-3xl font-bold">R19,999</p>
               </div>
             </div>
 
