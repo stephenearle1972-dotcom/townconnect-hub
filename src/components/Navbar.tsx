@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Communities', href: '/towns' },
   { name: 'For Businesses', href: '/business' },
+  { name: 'FAQ', href: '/#faq', isAnchor: true },
   { name: 'Network Solutions', href: '/network' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -13,12 +14,29 @@ const navigation = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   const isActive = (path: string) => {
-    if (path === '/') {
+    if (path === '/' || path === '/#faq') {
       return location.pathname === '/'
     }
     return location.pathname.startsWith(path)
+  }
+
+  const handleNavClick = (item: typeof navigation[0], e: React.MouseEvent) => {
+    if (item.isAnchor) {
+      e.preventDefault()
+      if (location.pathname === '/') {
+        // Already on home page, just scroll
+        document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        // Navigate to home page then scroll
+        navigate('/')
+        setTimeout(() => {
+          document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
+      }
+    }
   }
 
   return (
@@ -40,6 +58,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               to={item.href}
+              onClick={(e) => handleNavClick(item, e)}
               className={`text-sm font-semibold transition-colors ${
                 isActive(item.href)
                   ? 'text-teal'
@@ -84,12 +103,15 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block rounded-lg px-3 py-2 text-base font-semibold transition-colors ${
+                className={`block rounded-lg px-3 py-3.5 text-base font-semibold transition-colors ${
                   isActive(item.href)
                     ? 'bg-teal-50 text-teal'
                     : 'text-gray-700 hover:bg-gray-50'
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(item, e)
+                  setMobileMenuOpen(false)
+                }}
               >
                 {item.name}
               </Link>
