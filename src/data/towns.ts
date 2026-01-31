@@ -113,6 +113,19 @@ export const towns: Town[] = [
     lat: -25.8000,
     lng: 28.3100,
   },
+  {
+    id: 'stellenbosch',
+    name: 'Stellenbosch',
+    region: 'Western Cape',
+    description: 'City of Oaks',
+    businessCount: '0',
+    categories: ['Wine', 'Tourism', 'Restaurants', 'Education', 'Services'],
+    siteUrl: 'https://stellenboschconnect.netlify.app',
+    listingUrl: 'https://stellenboschconnect.netlify.app/#/add-business',
+    isActive: true,
+    lat: -33.9366,
+    lng: 18.8663,
+  },
 ];
 
 export const upcomingTowns: Town[] = [
